@@ -53,25 +53,25 @@ db;
 显示当前数据库所有集合
 show collections;
 # 向当前数据库,students集合中插入一个学生文档
-db.students.insert({"name":"孙悟空","age":18,"sex":"男"});
+db.students.insert({"name":"lucy","age":18,"sex":"女"});
 # 向当前数据库,students集合中插入多个学生文档
-db.students.insert([{"name":"紫霞","age":16,"sex":"女"},{"name":"牛魔","age":23,"sex":"男"}]);
+db.students.insert([{"name":"jack","age":16,"sex":"男"},{"name":"alex","age":23,"sex":"男"}]);
 # 查询当前数据库,students集合中所有的文档
 db.students.find();
 # 查询当前数据库,students集合中符合条件的文档
 db.students.find({"sex":"男"});
 # 模糊查询
-db.students.find({"name":/牛/});
+db.students.find({"name":/jack/});
 # 查询当前数据库,students集合中所有的文档的总数
 db.students.find().count();
 # 根据字段排序，1正序  -1倒序
 db.students.find().sort({"age":1});
 # 部分字段更新,默认只修改一条记录
-db.students.update({"name":"牛魔"}, {$set:{"name":"牛魔魔"}});
+db.students.update({"name":"lucy"}, {$set:{"name":"lily"}});
 # 部分字段更新,修改多条记录
 db.students.updateMany({"sex":"男"}, {$set:{"sex":"男生"}});
 # 删除符合条件的文档
-db.students.remove({"name":"牛魔魔"});
+db.students.remove({"name":"lily"});
 # 删除当前集合
 db.students.drop();
 # 删除当前数据库
