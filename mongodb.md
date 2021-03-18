@@ -1,4 +1,5 @@
-# 配置yum源
+# mongodb分片集群（primary、secondary、arbiter）
+## 配置yum源
 ~~~ bash
 cat << 'EOF' > /etc/yum.repos.d/mongodb-org.repo
 [mongodb-org-4.2]
