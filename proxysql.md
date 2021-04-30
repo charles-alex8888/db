@@ -117,6 +117,7 @@ select hostgroup_id,hostname,status from mysql_servers;
 
 
 #  rule表相关字段意义
+~~~
 show create table mysql_query_rules；
 rule_id：规则的id。规则是按照rule_id的顺序进行处理的。
 active：只有该字段值为1的规则才会加载到runtime数据结构，所以只有这些规则才会被查询处理模块处理。
@@ -157,3 +158,4 @@ stats库：
 是proxysql运行抓取的统计信息库，包括到后端各命令的执行次数、流量、processlist、查询种类汇总/执行时间等等。
 monitor库：
 存储monitor模块收集的信息，主要是对后端db的健康、延迟检查。
+~~~
